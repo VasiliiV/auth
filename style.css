@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+input {
+    width: 235px;
+    border-color: red;
+    height: 41px;
+    border-radius: 10px;
+}
+.red--password {
+    color: green;
+}
