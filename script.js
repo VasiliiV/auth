@@ -8,22 +8,21 @@ input.addEventListener('input', (event) => {
 //отрабатывает либо буквенная, либо проверка чисел...
     if (pass.length < 8){
         text.innerText = 'min 8 symbols';
-        text.classList.remove('green--password')
-        buttom.disabled = true
+        text.classList.remove('green--password');
+        buttom.disabled = true;
     } else if (!CheckingForBigLetters(pass)){
         text.innerText = 'use uppercase letters';
-        buttom.disabled = true
-        text.classList.add('red--password')
-    } else if (!isNaN(pass) === false){
+        buttom.disabled = true;
+        text.classList.add('red--password');
+    } else if (!NunNumber(pass)){
         text.innerText = 'use number';
         buttom.disabled = true;
-        text.classList.add('red--password')
-    }
-    else {
+        text.classList.add('red--password');
+    } else {
         text.innerText = 'password strong';
-        text.classList.add('green--password')
-        buttom.disabled = false
-        text.classList.remove('red--password')
+        text.classList.add('green--password');
+        buttom.disabled = false;
+        text.classList.remove('red--password');
     }
 })
 
@@ -40,6 +39,13 @@ function CheckingForBigLetters(string) {
 
 //Еще один способ проверка чисел в строке
 
-/* function NunNumber(myString) {
+function NunNumber(myString) {
     return /\d/.test(myString);
-} */
+}
+
+//Второй способ проверка чисел в строке isNaN()
+
+/* else if (!isNaN(pass) === false){
+    text.innerText = 'use number';
+    buttom.disabled = true;
+    text.classList.add('red--password'); */
