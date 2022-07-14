@@ -23,6 +23,7 @@ input.addEventListener('input', (event) => {
         text.innerText = 'password strong';
         text.classList.add('green--password')
         buttom.disabled = false
+        text.classList.remove('red--password')
     }
 })
 
