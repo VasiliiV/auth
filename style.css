@@ -11,6 +11,9 @@ input {
     height: 41px;
     border-radius: 10px;
 }
-.red--password {
+.green--password {
     color: green;
+}
+.red--password {
+    color: red;
 }
